@@ -1,1 +1,0 @@
-web: gunicorn w2w_api.wsgi
