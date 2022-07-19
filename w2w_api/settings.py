@@ -26,7 +26,10 @@ SECRET_KEY = 'django-insecure-d-dp1p53t*j0=r&a%=!dykveq)c!#%gjrljsitr4-x&99urwm%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [  
+    '0.0.0.0',
+    'https://quiet-wave-27100.herokuapp.com/',
+    '127.0.0.1']
 
 # Application definition
 
@@ -117,14 +120,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 import os
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-# Configure Django App for Heroku.
-# import django_heroku
-# django_heroku.settings(locals())
