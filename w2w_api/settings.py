@@ -29,7 +29,9 @@ DEBUG = True
 ALLOWED_HOSTS = [  
     '0.0.0.0',
     'https://quiet-wave-27100.herokuapp.com',
-    '127.0.0.1']
+    '127.0.0.1',
+    '*'
+    ]
 
 # Application definition
 
