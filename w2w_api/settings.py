@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-&z)w3_+3n2%n)g*pu9#1apnvd+6%76g%&ob3t2pon2kov(tac5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://quiet-gorge-88095.herokuapp.com/', '127.0.0.1']
 
 
 # Application definition
