@@ -6,4 +6,4 @@ from ..models.fish import Fish
 class FishSerializer(serializers.ModelSerializer):
     class Meta:
         model = Fish
-        fields = ('name', 'imgMain')
+        fields = ('id', 'name', 'imgMain')
