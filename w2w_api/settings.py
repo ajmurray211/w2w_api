@@ -79,10 +79,13 @@ WSGI_APPLICATION = 'w2w_api.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'w2w_api',
+        'NAME': 'de2n6pqsmactma',
+        'HOST' : 'ec2-52-204-157-26.compute-1.amazonaws.com',
+        'PORT': 5432,
+        'USER': 'pozswleiqwmrel',
+        'PASSWORD': '083da7efc78244f684f232de79c531c75120abc5a04c3f54744e5b1b4b37f43c'
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
