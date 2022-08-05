@@ -40,3 +40,4 @@ class FishView(APIView):
         fish = Fish.objects.all()
         data = FishSerializer(fish, many=True).data
         return Response(data)
+        
