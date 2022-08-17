@@ -1,3 +1,4 @@
+from urllib.request import Request
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -7,7 +8,17 @@ from ..serializers.fish import FishSerializer
 
 class FishingView(APIView):
     def get(self, request):
-        fish = Fish.objects.all()
+        family = request.GET.get('family', None)
+        typeOfWater = request.GET.get('typeOfWater', None)
+        name = request.GET.get('name', None)
+        if family is not None:
+            fish= Fish.objects.all().filter(family=family)
+        elif typeOfWater is not  None:
+            fish= Fish.objects.all().filter(typeOfWater=typeOfWater)
+        elif name is not  None:
+            fish= Fish.objects.all().filter(name__contains=name)
+        else:
+            fish = Fish.objects.all()
         data = FishSerializer(fish, many=True).data
         return Response(data)
     
